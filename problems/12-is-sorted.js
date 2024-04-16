@@ -13,6 +13,10 @@ isSorted([5, 4, 3, 2, 1]); // false
 
 function isSorted(arr) {
   // Your code here 
+  if (arr.length === 0) return true;
+  if (arr[arr.length-1] < arr[arr.length-2]) return false;
+  arr.pop();
+  return isSorted(arr);
 }
 
 

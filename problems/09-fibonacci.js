@@ -21,8 +21,18 @@ fibonacci(10); // 55
 
 function fibonacci(n) {
   // Your code here 
+  if (n===1) return 1;
+  if (n<=0) return 0;
+
+  let last = fibonacci(n-1);
+  let secondLast = fibonacci(n-2);
+
+  return last + secondLast;
+
 }
-  
+
+debugger
+console.log(fibonacci(4));
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = fibonacci;
   

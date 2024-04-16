@@ -18,7 +18,23 @@ factorial(5); // 120
 
 function factorial(num) {
   // Your code here 
+  if (num === 0) return 1;
+  return num * factorial(num-1);
 }
+
+// function allFactorials(n, factorials = [1]) {
+
+//   if (n > factorials.length) {
+//       factorials = allFactorials(n - 1, factorials)
+//   }
+
+//   factorials.push(n * factorials[n - 1])
+
+//   return factorials;
+// }
+
+// debugger
+// console.log(allFactorials(5));
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = factorial;
